@@ -160,7 +160,7 @@ include::{projectdir}/src/spec/test/SyntaxTest.groovy[tags=keywords_valid_id_aft
 === Quoted identifiers
 
 Quoted identifiers appear after the dot of a dotted expression.
-For instance, the `name` part of the `person.name` expression can be quoted with `person."name"` or `person.\'name'`.
+For instance, the `name` part of the `person.name` expression can be quoted with `person."name"` or `person.'name'`.
 This is particularly interesting when certain identifiers contain illegal characters that are forbidden by the Java Language Specification,
 but which are allowed by Groovy when quoted. For example, characters like a dash, a space, an exclamation mark, etc.
 
@@ -534,13 +534,13 @@ include::{projectdir}/src/spec/test/SyntaxTest.groovy[tags=dollar_slashy_1,inden
 |Escape character
 
 |Single quoted
-|`\'...'`
+|`'...'`
 |icon:check-empty[]
 |icon:check-empty[]
 |`\`
 
 |Triple single quoted
-|`\'''...\'''`
+|`'''...'''`
 |icon:check-empty[]
 |icon:check[]
 |`\`
@@ -1064,9 +1064,9 @@ But consider the case you want to pass a variable in lieu of the key, to have th
 ----
 include::{projectdir}/src/spec/test/SyntaxTest.groovy[tags=variable_key_1,indent=0]
 ----
-<1> The `key` associated with the `\'Guillaume'` name will actually be the `"key"` string, not the value associated with the `key` variable
-<2> The map doesn't contain the `\'name'` key
-<3> Instead, the map contains a `\'key'` key
+<1> The `key` associated with the `'Guillaume'` name will actually be the `"key"` string, not the value associated with the `key` variable
+<2> The map doesn't contain the `'name'` key
+<3> Instead, the map contains a `'key'` key
 
 [NOTE]
 You can also pass quoted strings as well as keys: +["name": "Guillaume"]+.
